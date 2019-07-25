@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script> -->
+  <script src="https://unpkg.com/kaljs@1.1.9/kal.js"></script>
+  <!-- <script src="../kal-js/js/kal.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Sudoku</title>
+</head>
+
+<body>
+  <div class="overlay">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ab79a231234507.564a1d23814ef.gif" width="60">
+    <p class="progress"></p>
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="title">Sudoku</div>
+      <div class="main-area">
+        <sudoku-area></sudoku-area>
+        <div class="buttons">
+          <a onclick="solveGame()">Solve</a>
+          <a onclick="newGame()">New game</a>
+          <a onclick="restartGame()">Restart</a>
+          <a onclick="clearBoard()">Clear</a>
+          <a onclick="validateBoard()" id="validateBtn">Validate</a>
+          <a onclick="lockNumbers()">Lock</a>
+          <a onclick="unlockNumbers()">Unlock</a>
+          <a onclick="importBoard()">Import</a>
+        </div>
+        <div id="console"></div>
+      </div>
+      <textarea id="importer" placeholder="Paste sudoku values here..."></textarea>
+      <fieldset>
+        <legend>Current board</legend>
+        <p id="currentBoard"></p>
+        </textarea>
+    </div>
+  </div>
+  <script src="sudoku.js"></script>
+</body>
+
+</html>
